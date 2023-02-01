@@ -1,4 +1,4 @@
-package appzicsstuff;
+package myNamedPackage;
 
 public class GrootHello {
 

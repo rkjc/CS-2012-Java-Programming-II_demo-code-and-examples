@@ -14,7 +14,8 @@ public class WriteData {
 			PrintWriter prtout = new PrintWriter(aFile);
 
 			prtout.println("hello text to file writing world!");
-			prtout.println("are yoiu sure?");
+			prtout.println("are you sure?");
+			prtout.println("more text, more tests?");
 			
 			prtout.flush();
 			prtout.close();
