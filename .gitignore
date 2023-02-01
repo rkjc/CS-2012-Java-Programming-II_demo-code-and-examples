@@ -1,0 +1,48 @@
+ 
+.git
+*target*
+*.jar
+*.war
+*.ear
+*.class
+*.backup
+*.kate-swp
+*.old
+.directory
+.project
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+*.lnk
+*.pydevproject
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# notes to self, because I always forget
+# a bash function for doing quick gitHub updates
+#  cupdate() {  git add . ; git commit -m "quick code update" ; git push origin main ; } 
+
+# I always forget this one when resetting the .gitignore
+#  git rm -r --cached . 
+
+# shows the files that have changed and need to be staged and commited
+#  git ls-files --others --exclude-standard
+
+# list by only name$  ls -1a
+
+#*have to run this every time terminal is started (need to script this ... eventually)*
+# eval "$(ssh-agent -s)" 
+# ssh-add ~/.ssh/id_ed25519_github  
+# testing:    ssh -T git@github.com 
