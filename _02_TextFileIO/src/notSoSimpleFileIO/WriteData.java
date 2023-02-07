@@ -1,4 +1,4 @@
-package simpleWriteRead;
+package notSoSimpleFileIO;
 
 import java.io.File;
 import java.io.PrintWriter;
@@ -6,14 +6,14 @@ import java.io.PrintWriter;
 public class WriteData {
 	public static void main(String[] args) {
 		// this will expect the file to exist in the default location
-		String pathString = "todaysPratcieFileWrite-X11.zork";
+		String pathString = "todaysPratcieFileWrite-X199.zork";
 
 		try {
 			File aFile = new File(pathString);
 
 			PrintWriter prtout = new PrintWriter(aFile);
 
-			prtout.println("hello text to file writing world!");
+			prtout.println("hello text to file writing world! \nextion called zork");
 			
 			prtout.flush();
 			prtout.close();
