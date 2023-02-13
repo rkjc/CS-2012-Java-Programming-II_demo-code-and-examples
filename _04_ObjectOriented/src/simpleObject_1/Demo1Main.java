@@ -1,16 +1,34 @@
 package simpleObject_1;
 
+import java.util.Random;
+
 public class Demo1Main {
 
 	public static void main(String[] args) {
 		System.out.println("Demo1Main running");
-
 		
+		Circle bob = new Circle();
 		
+		Circle zork = new Circle(99.3);
+		zork = new Circle(1111.7);
+		
+		bob.radius = 3.7;
+		
+		Rectangle bizz = new Rectangle();
+		bizz.height = 34.2;
+		bizz.width = 1;
+		System.out.println("rectangle height " + bizz.height);
+		System.out.println(bizz.getArea());
+		
+		System.out.println(bob.radius);
+		System.out.println(bob.getArea());
+		
+		System.out.println(zork.radius);
+		System.out.println(zork.getArea());
+		 
 	}
 
-	
-	
+
 	
 	
 	
