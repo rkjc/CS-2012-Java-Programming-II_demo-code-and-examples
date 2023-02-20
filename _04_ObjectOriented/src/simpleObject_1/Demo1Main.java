@@ -13,7 +13,9 @@ public class Demo1Main {
 
 		paper.setThing1(zork);
 		
+		Circle[] dizzy = new Circle[5];
 		
+		dizzy[0] = zork;
 
 		System.out.println("zort rad = " + zork.getRadius());
 		System.out.println("paper zort rad = " + paper.getThing1().getRadius());
