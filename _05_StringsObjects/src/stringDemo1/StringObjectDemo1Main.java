@@ -1,4 +1,4 @@
-package stringObjects1;
+package stringDemo1;
 
 import java.math.BigInteger;
 
