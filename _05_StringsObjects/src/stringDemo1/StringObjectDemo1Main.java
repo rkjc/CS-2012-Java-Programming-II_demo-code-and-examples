@@ -8,11 +8,6 @@ public class StringObjectDemo1Main {
 
 		String myStrThing = new String("go forth sunshine");
 
-		System.out.println(myStrThing);
-		
-		BigInteger a = new BigInteger("9223372036854775807");
-		
-		Integer zorkint = 3445;
 		
 
 	}
