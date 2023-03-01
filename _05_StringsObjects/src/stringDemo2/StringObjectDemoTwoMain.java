@@ -10,6 +10,16 @@ public class StringObjectDemoTwoMain {
 
 	public static void main(String[] args) {
   
+		String zork = "hey tHere";
+		System.out.println(zork);
+		String xob = zork.toUpperCase();
+		System.out.println(xob);
+		
+		System.out.println("world GO round");
+		System.out.println("world GO round".toUpperCase());
+		
+		
+		
 	}
 
 }
