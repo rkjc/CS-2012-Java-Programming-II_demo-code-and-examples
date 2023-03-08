@@ -1,13 +1,9 @@
 package shapes1;
 
-public class Triangle extends GeometricObject {
+public class Triangle extends Object {
 
 	public Triangle() {
 		super();
-		
-		//other
-		//things
-		
 	}
 	
 	public Double angle1 = 35.0;
