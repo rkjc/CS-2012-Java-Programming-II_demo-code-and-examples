@@ -3,21 +3,22 @@ package polyApp;
 public class PolymorphMain {
 
 	public static void main(String[] args) {
+	
+		GraduateStudent zork = new GraduateStudent();
 		
+		meth( zork );
+		meth( new Student() );
+		meth( new Person() );
+		//meth( new Object() );
+		//meth( new Integer("56") );
 		
-		
-		
-		
-		
-//		meth(new GraduateStudent());
-//		meth(new Student());
-//		meth(new Person());
-//		meth(new Object());
 	}
 
-	
-	public static void meth(Object myob) {
+
+	public static void meth( Person myob ) {
+		
 		System.out.println(myob.toString());
+		
 	}
 }
 

@@ -13,11 +13,15 @@ public class GeometryMain {
 		circ2 = circ1;
 		
 		Square bob = new Square();
-		GeometricShape gomon = new GeometricShape();
+		Object gomon = new Object();
 		
-		gomon = bob;
+		gomon = circ1;
 		
-		System.out.println(  ( (Circle)gomon ).getRadius() );
+		if (gomon instanceof Circle ) {
+			System.out.println(  ( (Circle)gomon ).getRadius() );
+		} else {
+			System.out.println(  ( (Square)gomon ).getSide1() );
+		}
 			
 
 	}
