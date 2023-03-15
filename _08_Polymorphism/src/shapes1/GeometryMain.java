@@ -17,6 +17,7 @@ public class GeometryMain {
 		
 		gomon = circ1;
 		
+		
 		if (gomon instanceof Circle ) {
 			System.out.println(  ( (Circle)gomon ).getRadius() );
 		} else {
