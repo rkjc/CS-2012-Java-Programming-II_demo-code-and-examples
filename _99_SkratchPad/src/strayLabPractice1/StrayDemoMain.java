@@ -24,9 +24,14 @@ public class StrayDemoMain {
 			input = new Scanner(file);
 
 			// Read data from a file
+			// loop - grab line by line
 			while (input.hasNext()) {
 				String lineFromFile = input.next();
 				System.out.println(lineFromFile);
+				// sub-string by comma, trim
+				// assign to variables
+				CarObject tempCar = new CarObject("vroom", "kaboom", 1807, "akkkk");
+				carList.add(tempCar);
 			}
 
 			// Close the file
@@ -37,18 +42,7 @@ public class StrayDemoMain {
 			e.printStackTrace();
 		}
 
-		// loop - grab line by line
-		// sub-string by comma, trim
-		// assign to variables
 
-		CarObject tempCar1 = new CarObject("vroom", "kaboom", 1807, "akkkk");
-		carList.add(tempCar1);
-
-		CarObject tempCar2 = new CarObject("blongo", "arkam", 1912, "thu-009");
-		carList.add(tempCar2);
-
-		CarObject tempCar3 = new CarObject("mars", "phobos", 2387, "000-001");
-		carList.add(tempCar3);
 
 		for (int i = 0; i < carList.size(); i++) {
 			System.out.println(carList.get(i).toString());

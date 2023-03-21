@@ -6,6 +6,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class CheckedExceptionDemo1 {
+	
+	// Checked Exceptions - the Java compiler (and Eclipse) will force you
+	// to deal with these exceptions
 
 	public static void main(String[] args) {
 		System.out.println("running");

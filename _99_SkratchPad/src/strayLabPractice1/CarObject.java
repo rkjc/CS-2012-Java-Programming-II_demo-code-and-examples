@@ -16,7 +16,7 @@ public class CarObject {
 	
 	@Override
 	public String toString() {
-		return make + " - " + model + " - " + String.valueOf(year) + " - " + license;
+		return "Make: " + make + " Model: " + model + " - " + String.valueOf(year) + " - " + license;
 	}
 
 	public String getMake() {
