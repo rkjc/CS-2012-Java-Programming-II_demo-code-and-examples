@@ -34,7 +34,10 @@ public abstract class GeometricShape extends Object {
 
 	// ------------ Methods ----------------
 
-
+	
+	public abstract String toString();
+	
+	
 	public void setColor(String color) {
 		this.color = color;
 	}

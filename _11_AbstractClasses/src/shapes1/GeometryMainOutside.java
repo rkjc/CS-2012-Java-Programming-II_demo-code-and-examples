@@ -16,11 +16,13 @@ public class GeometryMainOutside {
 		Circle circ1 = new Circle(4.5, "blue");
 		
 		System.out.println("circ using default toString result =>  " + circ1.toString());
-		System.out.println("circ overload toString result =>  " + circ1.toString(35));
+		
 		System.out.println("circle color= " + circ1.getColor());
 		zondar = circ1;
 		//System.out.println("circle as zondar color= " + zondar.getColor());
 		//System.out.println("circ1 show protected border color =>  " + circ1.borderColor);
+		//circ1.borderColor = "puce";
+		//System.out.println("circ1 show protected border color =>  " + circ1.borderColor); 
 		
 		//System.out.println(GeometricShape.color);
 		System.out.println("-----------------------------------");

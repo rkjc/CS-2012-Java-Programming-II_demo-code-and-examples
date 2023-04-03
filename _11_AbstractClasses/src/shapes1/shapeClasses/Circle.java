@@ -24,6 +24,7 @@ public class Circle extends GeometricShape {
 	
 // -------------- Methods -------------
 	
+	
 
 	public String getColor() {
 		return super.getColor();
@@ -47,16 +48,16 @@ public class Circle extends GeometricShape {
 //		this.radius = radius;
 //	}
 
-//	@Override
-//	public String toString() {
-//		return "circle color= " + super.getColor() + " radius= " + this.radius;
-//	}
+	@Override
+	public String toString() {
+		return "circle color= " + super.getColor() + " radius= " + this.radius;
+	}
 	
 
-	public String toString(int bob) {
-		String mystr = "Circle object, radius = " + radius.toString() + "; and your int value is= " + bob;
-		return mystr;
-	}
+//	public String toString(int bob) {
+//		String mystr = "Circle object, radius = " + radius.toString() + "; and your int value is= " + bob;
+//		return mystr;
+//	}
 	
 //	public boolean equals(Circle bob) {
 //	return(this.radius.equals(bob.radius) && super.getColor().equals(bob.getColor()));

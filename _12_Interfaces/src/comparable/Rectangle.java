@@ -1,6 +1,6 @@
 package comparable;
 
-public class Rectangle extends GeometricObject { //implements Comparable {
+public class Rectangle extends GeometricObject implements Comparable {
 	private double width;
 	private double height;
 
@@ -18,16 +18,21 @@ public class Rectangle extends GeometricObject { //implements Comparable {
 // ------------------ methods -------------------
 	
 	
-//	@Override
-//	public int compareTo(Object o) {
-//		if (this.width > ((Rectangle) o).getPerimeter())
-//			return 1;
-//		else if (this.width < ((Rectangle) o).getPerimeter())
-//			return -1;
-//		else
-//			return 0;
-//	}
+	@Override
+	public int compareTo(Object o) {
+		if (this.width > ((Rectangle) o).getWidth())
+			return 1;
+		else if (this.width < ((Rectangle) o).getWidth())
+			return -1;
+		else
+			return 0;
+	}
 
+//	@Override
+//	public int compareTo(Object arg0) {
+//		// TODO Auto-generated method stub
+//		return 0;
+//	}
 	
 	
 	@Override
@@ -63,6 +68,8 @@ public class Rectangle extends GeometricObject { //implements Comparable {
 	public double getPerimeter() {
 		return 2 * (width + height);
 	}
+
+
 
 
 

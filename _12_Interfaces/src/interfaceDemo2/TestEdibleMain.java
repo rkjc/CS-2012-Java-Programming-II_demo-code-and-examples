@@ -15,6 +15,10 @@ public class TestEdibleMain {
 				System.out.println(((Animal) objects[i]).sound());
 			}
 		}
+		
+		Object waxox = new Object();
+
+		
 	}
 
 }
