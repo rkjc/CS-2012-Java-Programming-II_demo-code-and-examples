@@ -1,4 +1,4 @@
-package shapes1;
+package shapes1.shapeClasses;
 
 public class Rectangle {
 	

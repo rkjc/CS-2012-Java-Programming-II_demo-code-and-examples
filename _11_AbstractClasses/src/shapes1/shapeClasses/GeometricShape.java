@@ -1,10 +1,13 @@
-package shapes1;
+package shapes1.shapeClasses;
 
-abstract class GeometricShape extends Object {
+public abstract class GeometricShape extends Object {
 
-	public String color = "";
+	private String color = "";
+	
 	private static double line = 1.0;
-	private String borderColor = "";
+	
+	protected String borderColor = "black";
+	
 	private int layer = 0;
 	private String tags[];
 
@@ -25,18 +28,19 @@ abstract class GeometricShape extends Object {
 
 	public GeometricShape(String inColor) {
 		super();
-		color = inColor;
+		this.color = inColor;
 		objectCount++;
 	}
 
 	// ------------ Methods ----------------
 
 
-	public abstract String getColor(); 
-	
-
 	public void setColor(String color) {
 		this.color = color;
+	}
+	
+	protected String getColor() {
+		return this.color;
 	}
 
 	public double getLine() {

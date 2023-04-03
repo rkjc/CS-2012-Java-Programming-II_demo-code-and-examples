@@ -1,10 +1,13 @@
 package comparable;
 
-public abstract class GeometricObject {
+public abstract class GeometricObject {    //implements Comparable {
 	  private String color = "white";
 	  private boolean filled;
 	  private java.util.Date dateCreated;
 
+	  
+// -------------  constructors ------------------
+	  
 	  /** Construct a default geometric object */
 	  protected GeometricObject() {
 	    dateCreated = new java.util.Date();
@@ -17,6 +20,10 @@ public abstract class GeometricObject {
 	    this.filled = filled;
 	  }
 
+// --------- methods -------------------
+	  
+	  
+	   
 	  /** Return color */
 	  public String getColor() {
 	    return color;
