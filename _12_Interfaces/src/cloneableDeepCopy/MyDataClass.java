@@ -1,4 +1,4 @@
-package cloneableArray;
+package cloneableDeepCopy;
 
 public class MyDataClass  implements Cloneable { 
 

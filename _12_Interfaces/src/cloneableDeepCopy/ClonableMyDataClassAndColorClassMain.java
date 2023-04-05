@@ -1,4 +1,4 @@
-package cloneableArray;
+package cloneableDeepCopy;
 
 import java.util.ArrayList;
 
