@@ -2,7 +2,7 @@ package cloneableArray;
 
 import java.util.ArrayList;
 
-public class ClonableHouseArrayListUserClassMain {
+public class ClonableMyDataClassAndColorClassMain {
 
 	public static void main(String[] args) throws CloneNotSupportedException {
 		MyDataClass data1 = new MyDataClass("zondar", "red");
@@ -14,8 +14,8 @@ public class ClonableHouseArrayListUserClassMain {
 		MyDataClass data3;
 				
 		data2 = data1; 
-		data3 = data1; 
-		data3 = data1.clone();  // Using the .clone() method that needs to be defined
+		//data3 = data1; 
+		data3 = data1.clone();  // Using the .clone() method
 		
 		System.out.println("arrData2 == arrData1 is " + (data2 == data1));
 		System.out.println("arrData3 == arrData1 is " + (data3 == data1));

@@ -1,6 +1,6 @@
 package cloneableArray;
 
-public class MyDataClass implements Cloneable { 
+public class MyDataClass  implements Cloneable { 
 
 	public String name = "";
 
