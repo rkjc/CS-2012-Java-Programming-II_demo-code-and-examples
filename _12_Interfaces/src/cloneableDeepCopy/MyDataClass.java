@@ -1,22 +1,24 @@
 package cloneableDeepCopy;
 
-public class MyDataClass  implements Cloneable { 
+public class MyDataClass implements Cloneable { 
 
-	public String name = "";
+	private String name = "";
 
-	public ColorClass color;
+	private ColorClass color = new ColorClass("blank");
 
 // ----------------- constructors ---------------
-
-	public MyDataClass(String val) {
-		this.name = val;
-		this.color = new ColorClass("black");
-	}
 	
 	public MyDataClass(String val, String col) {
 		this.name = val;
-		this.color = new ColorClass(col);
+		//this.color = new ColorClass(col);
+		this.color.setColor(col);
 	}
+	
+	public MyDataClass(MyDataClass mdc) {
+		this.name = mdc.getName();
+		this.color = mdc.getColor();
+	}
+	
 // ---------------- getter and setter methods -------------------
 	
 
@@ -39,9 +41,12 @@ public class MyDataClass  implements Cloneable {
 	// ------------------- additional methods -----------------------	
 
 	
+	
 	@Override // Cloneable
 	public MyDataClass clone() throws CloneNotSupportedException {
-		return (MyDataClass) super.clone();
+		//this.color = color.clone();
+		//return (MyDataClass) super.clone();
+		return new MyDataClass(this.name, this.color.getColor());
 	}
 
 	@Override
