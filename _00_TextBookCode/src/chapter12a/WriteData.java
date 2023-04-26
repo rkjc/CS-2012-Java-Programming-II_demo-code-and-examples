@@ -1,4 +1,4 @@
-package chapter12;
+package chapter12a;
 
 public class WriteData {
   public static void main(String[] args) throws Exception {

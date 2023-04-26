@@ -13,6 +13,7 @@ public class HelloGUImain extends Application {
 		try {
 			// create a new Text shape
 			Text messageText = new Text("Hello World! Lets learn JavaFX."); 
+			
 			//Text messageText2 = new Text("more text for\nthe fun of it, because\nthats what we do");
 			// stack page
 			StackPane groot = new StackPane();

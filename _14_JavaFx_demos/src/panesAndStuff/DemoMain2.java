@@ -12,13 +12,16 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class DemoMain extends Application {
+public class DemoMain2 extends Application {
 //
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		try {
 			StackPane spane = new StackPane();
-
+			StackPane spane2 = new StackPane();
+			StackPane spane3 = new StackPane();
+			
+			
 			Text messageText = new Text("Hello World! Lets learn JavaFX.");
 			messageText.setFont(Font.font("Times New Roman", FontWeight.BOLD, FontPosture.ITALIC, 40));
 
@@ -42,8 +45,13 @@ public class DemoMain extends Application {
 			// ------------- assemble the GUI window -------------
 			// add button to Stack Pane
 
-			spane.getChildren().add(messageText);
-			spane.getChildren().add(btn);
+			spane.getChildren().add(spane2);
+			
+			spane.getChildren().add(spane3);
+			
+			spane2.getChildren().add(messageText);
+			
+			spane3.getChildren().add(btn);
 			
 			
 			Scene scene = new Scene(spane, 400, 400);
