@@ -17,6 +17,7 @@ public class HelloGUImain extends Application {
 			//Text messageText2 = new Text("more text for\nthe fun of it, because\nthats what we do");
 			// stack page
 			StackPane groot = new StackPane();
+			groot.setStyle("-fx-border-color: red");
 
 			// add Text shape to Stack Pane
 			groot.getChildren().add(messageText);

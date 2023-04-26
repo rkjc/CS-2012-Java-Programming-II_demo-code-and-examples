@@ -5,12 +5,12 @@ module _13_JavaFX_GUI {
     requires transitive javafx.controls;
     requires transitive javafx.media;
     
-    exports examples;
+    exports examples_border_grid_box;
     exports appBasicsFX; 
-    exports appDemos; 
+    exports appDemos_textbook_code; 
     exports layoutDemos;
     exports skratchPak;
     exports controls;
     exports mouseStuff;
-	exports appGUI;
+	exports app_hello_GUI;
 }
