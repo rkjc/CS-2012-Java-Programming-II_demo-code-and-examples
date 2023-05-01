@@ -1,4 +1,4 @@
-package appDemos_textbook_code;
+package animations_demo;
 
 import java.util.Calendar; 
 import java.util.GregorianCalendar;

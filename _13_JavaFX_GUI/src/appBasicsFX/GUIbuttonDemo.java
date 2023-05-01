@@ -20,8 +20,6 @@ public class GUIbuttonDemo  extends Application{
 			//----------------- button code ----------------------
 			// create a new Button (Button is a subclass of Control)
 			Button btn = new Button();
-			
-			System.out.println(btn.getTypeSelector());
 			// set text inside button
 			btn.setText("Display Message");
 
@@ -51,3 +49,5 @@ public class GUIbuttonDemo  extends Application{
 		Application.launch(args);
 	}
 }
+
+//System.out.println(btn.getTypeSelector());

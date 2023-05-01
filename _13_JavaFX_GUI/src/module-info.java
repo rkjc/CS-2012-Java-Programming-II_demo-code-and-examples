@@ -10,7 +10,8 @@ module _13_JavaFX_GUI {
     exports appDemos_textbook_code; 
     exports layoutDemos;
     exports skratchPak;
-    exports controls;
+    exports controls_button_radio_check;
     exports mouseStuff;
 	exports app_hello_GUI;
+	exports animations_demo;
 }

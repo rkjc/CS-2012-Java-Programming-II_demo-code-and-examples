@@ -9,7 +9,6 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.ArcType;
@@ -27,8 +26,7 @@ public class MouseDrawingMain extends Application {
 	double mouseDownY = 0.0;
 	double mouseUpY = 9.0;
 	
-	StackPane drawPane = new StackPane();
-	
+	Pane drawPane = new Pane();
 	
 	@Override
 	public void start(Stage outStageObject) {
