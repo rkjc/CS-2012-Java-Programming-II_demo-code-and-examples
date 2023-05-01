@@ -3,6 +3,8 @@ package appBasicsFX;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
@@ -34,10 +36,15 @@ public class GUIbuttonDemo  extends Application{
 			btn.setOnAction(myBtnEvent);
 
 			// ------------- assemble the GUI window -------------
+			Stage mork = new Stage(); // Stage is concrete
+			Node zork; // Node is abstract
+			Parent bob; // Parent is abstract
+			
+			
 			// add button to Stack Pane
 			root.getChildren().add(btn);
 
-			Scene scene = new Scene(root, 250, 100);
+			Scene scene = new Scene(root, 400, 400);
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch (Exception e) {

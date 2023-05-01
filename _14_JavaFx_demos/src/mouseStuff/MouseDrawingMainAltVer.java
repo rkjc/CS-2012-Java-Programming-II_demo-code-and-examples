@@ -37,7 +37,7 @@ public class MouseDrawingMainAltVer extends Application {
 		EventHandler<MouseEvent> mousClik = new EventHandler<MouseEvent>() {
 			@Override
 			public void handle(MouseEvent myz) {
-				String tempTxt = "mouse clicked: " + roundOne(myz.getX()) + " " + roundOne(myz.getY());
+				String tempTxt = "mouse clicked: " + roundToOnePlace(myz.getX()) + " " + roundToOnePlace(myz.getY());
 				txt2.setText(tempTxt);
 				System.out.println(tempTxt);
 			}
@@ -55,9 +55,9 @@ public class MouseDrawingMainAltVer extends Application {
 		EventHandler<MouseEvent> mousPress = new EventHandler<MouseEvent>() {
 			@Override
 			public void handle(MouseEvent myz) {
-				mouseDownX = roundOne(myz.getX());
-				mouseDownY = roundOne(myz.getY());
-				System.out.println("mouse down X: "+ roundOne(myz.getX()) + ", Y: " + roundOne(myz.getY()));
+				mouseDownX = roundToOnePlace(myz.getX());
+				mouseDownY = roundToOnePlace(myz.getY());
+				System.out.println("mouse down X: "+ roundToOnePlace(myz.getX()) + ", Y: " + roundToOnePlace(myz.getY()));
 				System.out.println("mouse down X: "+ mouseDownX + ", Y: " + mouseDownY);
 			}
 		};
@@ -67,7 +67,7 @@ public class MouseDrawingMainAltVer extends Application {
 			public void handle(MouseEvent myz) {
 				mouseUpX = myz.getX();
 				mouseUpY = myz.getY();
-				System.out.println("mouse Up X: "+ roundOne(myz.getX()) + ", Y: " + roundOne(myz.getY()));
+				System.out.println("mouse Up X: "+ roundToOnePlace(myz.getX()) + ", Y: " + roundToOnePlace(myz.getY()));
 				System.out.println("mouse down X: "+ mouseDownX + ", Y: " + mouseDownY);
 				drawLine(graphicContext);
 			}
@@ -115,7 +115,7 @@ public class MouseDrawingMainAltVer extends Application {
 		launch(args);
 	}
 
-	public static double roundOne(double num) {
+	public static double roundToOnePlace(double num) {
 		num = Math.round(num * 10);
 		return num / 10;
 	}

@@ -5,5 +5,6 @@ module _14_JavaFx_demos {
     requires transitive javafx.media;
     
     exports panesAndStuff;
+    exports mouseStuff;
 
 }
