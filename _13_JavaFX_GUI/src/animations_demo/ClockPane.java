@@ -6,12 +6,15 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
 public class ClockPane extends Pane {
   private int hour;
   private int minute;
   private int second;
+  
+  private double sizez = 1.0;
   
   /** Construct a default clock with the current time*/
   public ClockPane() {
@@ -84,6 +87,7 @@ public class ClockPane extends Pane {
     circle.setFill(Color.WHITE);
     circle.setStroke(Color.BLACK);
     Text t1 = new Text(centerX - 5, centerY - clockRadius + 12, "12");
+    t1.setFont(Font.font(20));
     Text t2 = new Text(centerX - clockRadius + 3, centerY + 5, "9");
     Text t3 = new Text(centerX + clockRadius - 10, centerY + 3, "3");
     Text t4 = new Text(centerX - 3, centerY + clockRadius - 3, "6");
@@ -104,6 +108,7 @@ public class ClockPane extends Pane {
     double minuteY = centerY - mLength * 
       Math.cos(minute * (2 * Math.PI / 60));
     Line mLine = new Line(centerX, centerY, xMinute, minuteY);
+    mLine.setStrokeWidth(sizez * 5);
     mLine.setStroke(Color.BLUE);
     
     // Draw hour hand
@@ -113,6 +118,7 @@ public class ClockPane extends Pane {
     double hourY = centerY - hLength *
       Math.cos((hour % 12 + minute / 60.0) * (2 * Math.PI / 12));
     Line hLine = new Line(centerX, centerY, hourX, hourY);
+    hLine.setStrokeWidth(sizez * 5);
     hLine.setStroke(Color.GREEN);
     
     getChildren().clear();  

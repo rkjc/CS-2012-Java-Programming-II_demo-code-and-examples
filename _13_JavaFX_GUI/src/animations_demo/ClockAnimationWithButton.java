@@ -24,7 +24,9 @@ public class ClockAnimationWithButton extends Application {
 	@Override // Override the start method in the Application class
 	public void start(Stage primaryStage) {
 
-
+		Button btn1 = new Button();
+		Button btn2 = new Button();
+		
 		// ------ making panes ------
 
 		ClockPane clockPane = new ClockPane(); // Create a clock
@@ -50,9 +52,10 @@ public class ClockAnimationWithButton extends Application {
 			public void handle(ActionEvent e) {
 				if (runClock) {
 					runClock = false;
-					//btn1.setStyle("-fx-background-color: lightblue");
+					btn1.setStyle("-fx-background-color: blue");
 				} else {
 					runClock = true;
+					btn1.setStyle("-fx-background-color: #f3b");
 				}
 			}
 		};
@@ -73,8 +76,7 @@ public class ClockAnimationWithButton extends Application {
 
 		// ---- making buttons -----
 
-		Button btn1 = new Button();
-		Button btn2 = new Button();
+		
 		// set text inside button
 		btn1.setText("start/stop");
 		btn2.setText("button 2");
@@ -93,6 +95,8 @@ public class ClockAnimationWithButton extends Application {
 
 		StackPane sroot = new StackPane();
 		sroot.getChildren().add(vBox);
+		
+		
 		Scene scene = new Scene(sroot, 400, 500);
 		// Create a scene and place it in the stage
 		// Scene scene = new Scene(vBox, 400, 400);
