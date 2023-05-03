@@ -14,13 +14,15 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.ArcType;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class MouseDrawingMain extends Application {
 	
-	Text txt1 = new Text("Text at the bottom of the VBox stack");
-	Text txt2 = new Text("click position");
+
+
 	double mouseDownX = 0.0;
 	double mouseUpX = 0.0;
 	double mouseDownY = 0.0;
@@ -30,6 +32,12 @@ public class MouseDrawingMain extends Application {
 	
 	@Override
 	public void start(Stage outStageObject) {
+		
+		Text txt1 = new Text("Text at the bottom of the VBox stack");
+		txt1.setFont(Font.font("Ariel", 22));
+		Text txt2 = new Text("click position");
+		txt2.setFont(Font.font("Ariel", 22));
+		
 		outStageObject.setTitle("Drawing Shapes");
 		//creating group object for adding canvas object to it
 		Group groupObject = new Group();
@@ -52,7 +60,7 @@ public class MouseDrawingMain extends Application {
 		EventHandler<MouseEvent> mousLoc = new EventHandler<MouseEvent>() {
 			@Override
 			public void handle(MouseEvent myz) {
-				String txt1cont = "x coord: " + roundOne(myz.getX()) + " - x coord: " + roundOne(myz.getY());
+				String txt1cont = "x coord: " + roundOne(myz.getX()) + "\ny coord: " + roundOne(myz.getY());
 				txt1.setText(txt1cont);
 				System.out.println("mouse Loc: " + myz.getX() + " " + myz.getY());
 			}

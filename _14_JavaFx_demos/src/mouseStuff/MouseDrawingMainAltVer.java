@@ -1,13 +1,16 @@
 package mouseStuff;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.ArcType;
@@ -30,9 +33,43 @@ public class MouseDrawingMainAltVer extends Application {
 		// creating group object for adding canvas object to it
 		Group groupObject = new Group();
 		// creating canvas object
-		Canvas canvasRef = new Canvas(400, 300);
+		Canvas myCanvas = new Canvas(800, 600);
 		// creating GraphicsContext for drawing the image
-		GraphicsContext graphicContext = canvasRef.getGraphicsContext2D();
+		GraphicsContext graphicContext = myCanvas.getGraphicsContext2D();
+		
+		StackPane mainPain = new StackPane();
+		
+		Button btn = new Button();
+		// set text inside button
+		btn.setText("Red");
+		
+		EventHandler<ActionEvent> zevent = new EventHandler<ActionEvent>() {
+			public void handle(ActionEvent e) {
+				Color cul = Color.BLACK;
+				cul = toggleColor();
+				graphicContext.setFill(cul);
+				graphicContext.setStroke(Color.RED);
+			}
+		};
+
+		// when button is pressed
+		btn.setOnAction(zevent);
+		
+		Button btn2 = new Button();
+		// set text inside button
+		btn.setText("Blue");
+		
+		EventHandler<ActionEvent> bevent = new EventHandler<ActionEvent>() {
+			public void handle(ActionEvent e) {
+//				Color cul = Color.BLACK;
+//				cul = toggleColor();
+//				graphicContext.setFill(cul);
+				graphicContext.setStroke(Color.BLUE);
+			}
+		};
+
+		// when button is pressed
+		btn2.setOnAction(bevent);
 
 		EventHandler<MouseEvent> mousClik = new EventHandler<MouseEvent>() {
 			@Override
@@ -89,20 +126,29 @@ public class MouseDrawingMainAltVer extends Application {
 		graphicContext.fillArc(110, 111, 31, 31, 46, 241, ArcType.ROUND);
 		graphicContext.strokeArc(111, 111, 31, 31, 46, 241, ArcType.ROUND);
 
+		// ---- making containers ----
 		VBox vbox1 = new VBox(10);
+		VBox vboxButtons = new VBox(10);
 		HBox hbox1 = new HBox(10);
-
+		HBox hbox2 = new HBox(10);
+		
+		vboxButtons.getChildren().add(btn);
+		vboxButtons.getChildren().add(btn2);
+		
 		hbox1.getChildren().add(txt1);
 		hbox1.getChildren().add(txt2);
 
-		groupObject.getChildren().add(canvasRef);
+		groupObject.getChildren().add(myCanvas);
 
 		groupObject.setOnMouseClicked(mousClik);
 		groupObject.setOnMouseMoved(mousLoc);
 		groupObject.setOnMousePressed(mousPress);
 		groupObject.setOnMouseReleased(mousRels);
 
-		vbox1.getChildren().add(groupObject);
+		hbox2.getChildren().add(groupObject);
+		hbox2.getChildren().add(vboxButtons);
+		
+		vbox1.getChildren().add(hbox2);
 		vbox1.getChildren().add(hbox1);
 
 		// creating scene object
@@ -110,6 +156,10 @@ public class MouseDrawingMainAltVer extends Application {
 		outStageObject.setScene(sceneObject);
 		outStageObject.show();
 	}
+	
+	public Color toggleColor() {
+		return  Color.RED;
+	};
 
 	public static void main(String[] args) {
 		launch(args);

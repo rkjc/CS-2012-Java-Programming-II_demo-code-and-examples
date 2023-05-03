@@ -23,7 +23,9 @@ public class LambdaHandlerDemo extends Application {
 
 		// Create and register the handler
 		btNew.setOnAction((ActionEvent e) -> {
+			
 			System.out.println("Process New");
+		
 		});
 
 		btOpen.setOnAction((e) -> {
