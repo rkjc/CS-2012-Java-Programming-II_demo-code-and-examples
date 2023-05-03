@@ -21,36 +21,22 @@ public class StageSizeChangeListener extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		try {
 			StackPane spane = new StackPane();
-			Text messageText = new Text("Hello World! Lets learn JavaFX."); 
+			Text messageText = new Text("Hello World! Lets learn JavaFX.");
 
-
-			ChangeListener<Number> stageSizeListener = (observable, oldValue, newValue) -> messageText.setText("Height: " + primaryStage.getHeight() + " Width: " + primaryStage.getWidth());
-
-//			ChangeListener<? super Number> reevent = (ChangeListener<? super Number>) new EventHandler<ActionEvent>() {
-//				public void handle(ActionEvent e) {
-//					// btn.setText("Hi there! You clicked the button!");
-//					String mssg = "i have been changed";
-//					messageText.setText(mssg);
-//				}
-//			};
-			
+			ChangeListener<Number> stageSizeListener = (bobohbob, oldValue, newValue) -> messageText
+					.setText("Height: " + primaryStage.getHeight() + " Width: " + primaryStage.getWidth());
 
 			primaryStage.widthProperty().addListener(stageSizeListener);
-			//primaryStage.heightProperty().addListener(stageSizeListener);
+			primaryStage.heightProperty().addListener(stageSizeListener);
 
 			// ------------- assemble the GUI window -------------
-			// add button to Stack Pane
-
+			
 			spane.getChildren().add(messageText);
-			// spane.getChildren().add(btn);
+			
 
 			Scene scene = new Scene(spane, 400, 400);
 			primaryStage.setScene(scene);
 			primaryStage.show();
-			// scene.widthProperty().addListener(new InvalidationListener() {ov –>
-			// resize();});
-			// scene.heightProperty().addListener(ov –> resize());
-
 
 
 		} catch (Exception e) {
