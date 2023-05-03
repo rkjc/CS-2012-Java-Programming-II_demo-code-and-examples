@@ -14,39 +14,38 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class StageSizeChangeListener extends Application {
-//
-	Text messageText = new Text("Hello World! Lets learn JavaFX.");
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		try {
-			StackPane spane = new StackPane();
 			Text messageText = new Text("Hello World! Lets learn JavaFX.");
+			messageText.setFont(Font.font("Ariel", FontWeight.BOLD, 22));
+			
+			StackPane spane = new StackPane();
 
-			ChangeListener<Number> stageSizeListener = (bobohbob, oldValue, newValue) -> messageText
-					.setText("Height: " + primaryStage.getHeight() + " Width: " + primaryStage.getWidth());
+
+			ChangeListener<Number> stageSizeListener = (bobohbob, oldValue, newValue) -> {
+				System.out.println("debug " + oldValue.toString());
+				messageText.setText("Height: " + primaryStage.getHeight() + " Width: " + primaryStage.getWidth());
+			};
 
 			primaryStage.widthProperty().addListener(stageSizeListener);
 			primaryStage.heightProperty().addListener(stageSizeListener);
 
 			// ------------- assemble the GUI window -------------
-			
+
 			spane.getChildren().add(messageText);
-			
 
 			Scene scene = new Scene(spane, 400, 400);
 			primaryStage.setScene(scene);
 			primaryStage.show();
-
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
-	private void resize() {
-		messageText.setFont(Font.font(20));
-	}
+
 
 	public static void main(String[] args) {
 		System.out.println("working");
