@@ -13,6 +13,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.scene.shape.ArcType;
 import javafx.scene.shape.Line;
 import javafx.scene.text.Text;
@@ -49,6 +50,7 @@ public class MouseDrawingMainAltVer extends Application {
 				cul = toggleColor();
 				graphicContext.setFill(cul);
 				graphicContext.setStroke(Color.RED);
+				//graphicContext.setStroke(Color.BLUE);
 			}
 		};
 

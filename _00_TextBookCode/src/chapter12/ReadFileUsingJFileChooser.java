@@ -1,7 +1,7 @@
 package chapter12;
 
 import java.util.Scanner;
-import javax.swing.JFileChooser;
+//import javax.swing.JFileChooser;
 
 public class ReadFileUsingJFileChooser {
 	public static void main(String[] args) throws Exception {
