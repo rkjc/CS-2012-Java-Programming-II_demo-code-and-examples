@@ -13,4 +13,7 @@ module _11_GUI_JavaFX {
 	exports d_shapes;
 	exports e_layoutsAdv;
 	exports f_images;
+	exports g_keyboardInput;
+	exports h_mouseInput;
+	
 }

@@ -22,7 +22,8 @@ public class SimpleImageUse extends Application {
 
 		StackPane spane = new StackPane();
 
-		Image img1 = new Image(getClass().getResource("orange-dragon.gif").toURI().toString());
+		// this location is based on running the program on the Eclipse IDE
+		Image img1 = new Image(getClass().getResource("orange-dragon.png").toURI().toString());
 		
 		ImageView imageView1 = new ImageView(img1);
 		imageView1.setFitHeight(400);
@@ -33,7 +34,6 @@ public class SimpleImageUse extends Application {
 		
 		// Create a scene and place it in the stage
 		Scene scene = new Scene(spane, 500, 500);
-		//primaryStage.setTitle("ImageDemo"); // Set the stage title
 		primaryStage.setScene(scene); // Place the scene in the stage
 		primaryStage.show(); // Display the stage
 
