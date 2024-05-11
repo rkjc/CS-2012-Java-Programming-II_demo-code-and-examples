@@ -1,0 +1,180 @@
+ 
+CS-2012 sec-01 Practice Exercise for Programming Final
+
+Give this a try.
+I tried to make as close to what the actual final will be as I could.
+On Monday I will post a possible solution which should act a study guide for the final.
+(you can still upload the practice for extra credit after I post the a solution, just change it up a bit)
+
+
+I will also open the Final on Monday (but without solution code).
+
+
+
+
+Write the supporting Class files for the Visit the Zoo program.
+
+Description:
+This program generates a description of a visit to the Zoo, 
+as the charachter visits the various exhibits.
+
+You will be provided with the file that contains the main() function.
+
+Use this to run and test the program.
+
+Do Not change the main() file.
+
+You are tasked with writing and implementing the support classes that
+the main() program will use when it runs. 
+
+
+The file structure, package names, class and interface names, and all of the 
+method names are predefined and should match those in the main 
+program so that it will properly function.
+
+This means that you must name your 
+classes and methods exactly as shown, otherwise the main program will not 
+be able to instanciate the classes or use their methods.
+
+Write the supporting Class files for the Visit the Zoo program.
+
+Upload all for your work in a zip file.
+
+ 
+The file structure will look like this:
+Make sure that you name the package 'zooVisit'.
+
+└── src
+    └── zooVisit
+        ├── Animal.java
+        ├── ExhibitEnvironment.java
+        ├── Mammal.java
+        ├── MyNameData.java
+        ├── Reptile.java
+        ├── StartZooVisit.java
+        └── Venomous.java
+
+
+
+
+Do not inclued the module-info.java file
+
+Make sure to not change the files StartZooVisit.java I will be using my own copies of those files to run and check your work, changing them may cause your program break.
+
+You must change the MyNameData.java file to contain your information not mine. I will be using that to help me assign your grade to you.
+
+The Sub-classes must not implement a no-argument constructor.
+  for example, new Mammal() should fail, but new Mammal("Beaver", ... ) should work.
+  
+All attribute variables should be private.
+values should be read or changed with getter and setter methods
+
+The toString methods should return:
+    TypeOfAnimal + " weighs: " + Weight + " - and makes the sound: " + Sound 
+    
+    
+Here are the starter files: (right click on the small down arrow and choose save-link-as. should just copy the file to your computer)
+
+StartZooVisit.java
+
+
+Venomous.java
+
+
+MyNameData.java
+
+
+
+
+
+=======================================
+
+Files that you will need to make and upload: 
+
+Animal.java
+ExhibitEnvironment.java
+Mammal.java
+MyNameData.java
+Reptile.java
+StartZooVisit.java
+Venomous.java
+
+
+The Sub-classes must not implement a no-argument constructor.
+  for example, new Reptile() should fail, but new Mammal("Beaver", ... ) should work.
+
+------------------------------------------------------------------ 
+	Details and requirements
+------------------------------------------------------------------ 
+Animal.java 
+	this class is abstract and must have these abstract public methods:
+
+	public methods:
+	
+	getTypeOfAnimal - returns string
+	setTypeOfAnimal - takes string
+	
+	getWeight - returns double
+	setWeight - takes a double
+	
+	getSound - returns string
+	setSound - takes a String value
+	...
+	abstract methods:
+	toString - returns string
+
+------------------------------------------------------------------
+
+Reptile.java
+	inherits from Animal
+    must implement Venomous and it's methods
+    
+    constructors:
+		Reptile - takes single string attribute for TypeOfAnimel
+		Reptile - takes 4 attributes, TypeOfAnimel, animal sounds, wight, decoration)
+    
+    must have these public methods:
+		getTypeOfSkin - returns string
+		setTypeOfSkin - takes a string as input
+    
+	must implement
+        toString()
+
+------------------------------------------------------------------
+
+Mammal.java
+inherits from Animal
+
+	constructors:
+		Mammal - takes single string attribute for TypeOfAnimel
+		Mammal - takes 4 attributes, TypeOfAnimel, animal sounds, wight, decoration)
+    
+	must have these public methods:
+		getFurType - returns a string value
+		setFurType - takes a string attribute
+	
+	must implement
+        toString()
+
+------------------------------------------------------------------
+
+ExhibitEnvironment.java
+
+	constructor:
+		default
+
+	must have these public methods:
+        getAnimals - returns ArrayList
+		
+		addAnimal - taks Animal object as attribute
+	
+		getDecorations - returns ArrayList 
+		
+		addDecoration - takes a string and adds it to the decorations attay list
+
+		getEnvironment - returns a String
+	
+		setEnvironment takes a String as an attribute
+
+------------------------------------------------------------------
+ 
